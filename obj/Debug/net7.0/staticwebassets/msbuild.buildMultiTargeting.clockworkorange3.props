@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="..\build\clockworkorange3.props" />
+</Project>

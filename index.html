@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clock Works Orange</title>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+    <script>
+        function showContent(contentId) {
+          // Hide all content divs
+          var allContents = document.querySelectorAll('.page-content');
+          allContents.forEach(function(content) {
+            content.style.display = 'none';
+          });
+    
+          // Show the selected content div
+          var selectedContent = document.getElementById(contentId);
+          if (selectedContent) {
+            selectedContent.style.display = 'block';
+          }
+        }
+      </script>
+</head>
+<body>
+    <section class="wrapper">
+        <section class="heading">
+            <section class="logo">
+                <img src="clock.jpg" width="100px" alt="A Clock">
+                <section class="site-title">
+                    <h1><span>Clock Works Orange</span></h1>
+                </section>
+                <nav>
+                    <ul>
+                        <li><a href="">Home</a></li>
+                        <li><a href="">About</a></li>
+                        <li><a href="">Contact Us</a></li>
+                        <li><a href="">Destini</a></li>
+                    </ul>
+                </nav>
+                <section class="hero">
+                    <section class="banner">                        
+                        <section class="colum-4">
+                            <!-- Clock container goes here -->
+                            <div class="container">
+                                <div class="clock">
+                                    <span id="Hrs">00</span>
+                                    <span>:</span>
+                                    <span id="min">00</span>
+                                    <span>:</span>
+                                    <span id="sec">00</span>
+                                </div>
+                            </div>
+                            <!-- End of Clock container -->
+                        </section>
+                    </section>
+                    <section class="news-letter">
+                        <!-- ... Existing news-letter code ... -->
+                    </section>
+                </section>
+                <section class="Sitemap">
+                    <!-- ... Existing Sitemap sections ... -->
+                </section>
+            </section>
+        </section>
+    
+        <script>
+            let Hrs = document.getElementById("Hrs");
+            let min = document.getElementById("min");
+            let sec = document.getElementById("sec");
+    
+            setInterval(() => {
+                let currenttime = new Date();
+                Hrs.innerHTML = (currenttime.getHours() < 10 ? "0" : "") + currenttime.getHours();
+                min.innerHTML = (currenttime.getMinutes() < 10 ? "0" : "") + currenttime.getMinutes();
+                sec.innerHTML = (currenttime.getSeconds() < 10 ? "0" : "") + currenttime.getSeconds();
+            }, 1000);
+        </script>
+             
+                        </section>                   
+                </section>
+                <section class="news-letter">
+                    <section class="signup" id="signupForm">
+                        <input type="text" name="username" placeholder="Your Name" id="usernameInput">
+                        <input type="password" name="password" placeholder="Your Password" id="passwordInput">
+                        <button type="button" class="login-button" id="loginBtn">Login</button>
+                        <button type="button" class="register-button">Register</button>
+                    </section>
+                    <section class="Signup-text">
+                        <p>Welcome to the world of time and fun</p>
+                    </section>
+                    <section class="secure-content" id="secureContent" style="display: none;">
+                        <!-- Content for authenticated users -->
+                        <h2>Welcome, User!</h2>
+                        <p>This is secure content visible only after login.</p>
+                        <!-- Add more secure content here -->
+                    </section>
+                </section>
+                </section>
+                <script>
+                    document.addEventListener('DOMContentLoaded', function () {
+                        document.getElementById('loginBtn').addEventListener('click', function () {
+                            // Simulate authentication (replace this with your actual authentication logic)
+                            const username = document.getElementById('usernameInput').value;
+                            const password = document.getElementById('passwordInput').value;
+            
+                            if (username === 'user' && password === 'password') {
+                                // Successful login, show secure content
+                                document.getElementById('signupForm').style.display = 'none';
+                                document.getElementById('secureContent').style.display = 'block';
+                            } else {
+                                // Failed login, display an error or handle accordingly
+                                alert('Invalid username or password. Try again.');
+                            }
+                        });
+                    });
+                </script>
+                
+<section class="Sitemap">
+    <!-- Removed "links" class from the following sections -->
+    <section>
+        <h3>Site Links</h3>
+        <ul>
+          <li><a href="#" onclick="showContent('home-content')">Home</a></li>
+          <li><a href="#" onclick="showContent('about-content')">About</a></li>
+          <li><a href="#" onclick="showContent('contact-content')">Contact Us</a></li>
+          <li><a href="#" onclick="showContent('designs-content')">Designs</a></li>
+        </ul>
+      </section>
+    
+      <!-- Content Divs -->
+      <div id="home-content" class="page-content">
+        <!-- Your Home content goes here -->
+        <h2>Home Content</h2>
+        <p>This is the content for the Home page.</p>
+      </div>
+    
+      <div id="about-content" class="page-content" style="display: none;">
+        <!-- Your About content goes here -->
+        <h2>About Content</h2>
+        <p>This is the content for the About page.</p>
+      </div>
+    
+      <div id="contact-content" class="page-content" style="display: none;">
+        <!-- Your Contact content goes here -->
+        <h2>Contact Content</h2>
+        <p>This is the content for the Contact Us page.</p>
+      </div>
+    
+      <div id="designs-content" class="page-content" style="display: none;">
+        <!-- Your Designs content goes here -->
+        <h2>Designs Content</h2>
+        <p>This is the content for the Designs page.</p>
+      </div>
+    </section>
+    <section>
+        <h3>Socials</h3>
+        <ul>
+            <li><a href="https://www.google.com" target="_blank">Google</a></li>
+            <li><a href="https://www.facebook.com" target="_blank">Facebook</a></li>
+            <li><a href="https://www.twitter.com" target="_blank">Twitter</a></li>
+            <li><a href="https://www.instagram.com" target="_blank">Instagram</a></li>
+
+        </ul>
+    </section>
+    <section>
+        <h3>Recent Posts</h3>
+        <ul>
+            <li><a href="">Fourms</a></li>
+            <li><a href="">Codeworld</a></li>
+            <li><a href="">Timeline</a></li>
+            <li><a href="">myworld</a></li>
+        </ul>
+    </section>
+</section>
+                    </section>
+                </section>
+            </section>
+        </section>
+    </section>
+</body>
+
+</html>
